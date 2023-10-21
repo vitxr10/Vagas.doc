@@ -1,0 +1,12 @@
+﻿@model UsuarioModel
+
+<div class="dropdown">
+    <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Perfil
+    </button>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" asp-route-id="@Model.Id" asp-controller="Usuario" asp-action="AlterarSenha">Alterar senha</a></li>
+        <li><a class="dropdown-item" asp-route-id="@Model.Id" asp-controller="Usuario" asp-action="Excluir">Excluir conta</a></li>
+        <li><a class="dropdown-item" asp-route-id="@Model.Id" asp-controller="Login" asp-action="Sair">Sair</a></li>
+    </ul>
+</div>

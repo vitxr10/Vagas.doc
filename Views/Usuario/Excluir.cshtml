@@ -1,0 +1,11 @@
+﻿@model UsuarioModel
+@{
+}
+
+<form class="text-center" asp-controller="Usuario" asp-action="Excluir" method="post">
+    <h1>Excluir conta?</h1>
+    <p>@Model.Nome, tem certeza que deseja excluir sua conta?</p>
+
+    <button type="submit" class="btn btn-danger">Excluir</button>
+    <a class="btn btn-secondary" asp-controller="Home" asp-action="Index">Cancelar</a>
+</form>

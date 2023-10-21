@@ -1,0 +1,33 @@
+﻿@model LoginModel
+@{
+    Layout = "_LayoutDeslogado";
+    ViewData["Title"] = "Login";
+}
+
+<h1 class="text-center">Login</h1>
+
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill" /></svg>
+        <div>
+            @TempData["MensagemErro"]
+        </div>
+    </div>
+}
+
+<form asp-controller="Login" asp-action="Entrar" method="post">
+    <div class="mb-3">
+        <label for="login" class="form-label">Login:</label>
+        <input type="email" class="form-control" asp-for="Login" required>
+    </div>
+    <div class="mb-3">
+        <label for="senha" class="form-label">Senha:</label>
+        <input type="password" class="form-control" asp-for="Senha" required>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+</form>
+
+<div>
+    <p>Não tem uma conta? <a asp-controller="Usuario" asp-action="Index">Cadastre-se</a> </p>
+</div>

@@ -1,0 +1,89 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = VagasDoc
+build_property.RootNamespace = VagasDoc
+build_property.ProjectDir = C:\Users\vitor\OneDrive\Área de Trabalho\VagasDoc\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\vitor\OneDrive\Área de Trabalho\VagasDoc
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/vitor/OneDrive/Área de Trabalho/VagasDoc/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vitor/OneDrive/Área de Trabalho/VagasDoc/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vitor/OneDrive/Área de Trabalho/VagasDoc/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vitor/OneDrive/Área de Trabalho/VagasDoc/Views/Shared/Components/Perfil/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcUGVyZmlsXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vitor/OneDrive/Área de Trabalho/VagasDoc/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vitor/OneDrive/Área de Trabalho/VagasDoc/Views/Shared/_LayoutDeslogado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXREZXNsb2dhZG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vitor/OneDrive/Área de Trabalho/VagasDoc/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vitor/OneDrive/Área de Trabalho/VagasDoc/Views/Usuario/AlterarSenha.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xBbHRlcmFyU2VuaGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vitor/OneDrive/Área de Trabalho/VagasDoc/Views/Usuario/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xFZGl0YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vitor/OneDrive/Área de Trabalho/VagasDoc/Views/Usuario/Excluir.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xFeGNsdWlyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vitor/OneDrive/Área de Trabalho/VagasDoc/Views/Usuario/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vitor/OneDrive/Área de Trabalho/VagasDoc/Views/Vaga/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFnYVxFZGl0YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vitor/OneDrive/Área de Trabalho/VagasDoc/Views/Vaga/Excluir.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFnYVxFeGNsdWlyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vitor/OneDrive/Área de Trabalho/VagasDoc/Views/Vaga/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFnYVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vitor/OneDrive/Área de Trabalho/VagasDoc/Views/Vaga/Listar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFnYVxMaXN0YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vitor/OneDrive/Área de Trabalho/VagasDoc/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vitor/OneDrive/Área de Trabalho/VagasDoc/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vitor/OneDrive/Área de Trabalho/VagasDoc/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-yqje8dequa

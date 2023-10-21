@@ -1,0 +1,11 @@
+﻿@model VagaModel
+@{
+}
+
+<form class="text-center" asp-controller="Vaga" asp-action="Excluir" method="post">
+    <h1>Excluir vaga?</h1>
+    <p>Tem certeza que deseja excluir a vaga de @Model.Titulo?</p>
+
+    <button type="submit" class="btn btn-danger">Excluir</button>
+    <a class="btn btn-secondary" asp-controller="Vaga" asp-action="Listar">Cancelar</a>
+</form>

@@ -1,0 +1,25 @@
+﻿@model UsuarioModel
+@{
+}
+<div>
+    <h1 class="text-center">Editar perfil</h1>
+</div>
+
+
+<form class="container" asp-controller="Usuario" asp-action="Editar" method="post">
+    <div class="mb-3">
+        <label for="tituloVaga" class="form-label">Nome:</label>
+        <input type="text" class="form-control" asp-for="Nome" placeholder="Digite seu nome" required>
+    </div>
+    <div class="mb-3">
+        <label for="login" class="form-label">Email:</label>
+        <input type="email" class="form-control" asp-for="Login" placeholder="Ex: username@email.com" required>
+    </div>
+    <div class="mb-3">
+        <label for="senha" class="form-label">Senha:</label>
+        <input type="password" class="form-control" asp-for="Senha" placeholder="Digite uma senha" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    <a class="btn btn-secondary" asp-controller="Home" asp-action="Index">Voltar</a>
+</form>

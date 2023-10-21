@@ -1,0 +1,32 @@
+﻿@model UsuarioModel
+@{
+}
+
+<h1 class="text-center">Alterar senha</h1>
+
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill" /></svg>
+        <div>
+            @TempData["MensagemErro"]
+        </div>
+    </div>
+}
+
+<form asp-controller="Usuario" asp-action="AlterarSenha" method="post">
+    <div class="mb-3">
+        <label for="senha" class="form-label">Senha atual:</label>
+        <input type="password" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label for="senha" class="form-label">Nova senha:</label>
+        <input type="password" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label for="senha" class="form-label">Confirmar nova senha:</label>
+        <input type="password" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Salvar</button>
+    <a class="btn btn-secondary" asp-controller="Home" asp-action="Index">Voltar</a>
+</form>

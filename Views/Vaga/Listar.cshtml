@@ -1,0 +1,78 @@
+﻿@using VagasDoc.Enums;
+@model List<VagaModel>
+
+
+@if (Model != null && Model.Any())
+{
+    <div>
+        <h1 class="text-center">Minhas vagas</h1>
+
+        <a asp-area="" asp-controller="Vaga" asp-action="Index">Cadastrar vaga</a>
+    </div>
+
+    <table class="table" id="minhasVagas">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Título</th>
+                <th scope="col">Empresa</th>
+                <th scope="col">Situação</th>
+                <th scope="col">Modalidade</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (VagaModel vaga in Model)
+            {
+                <tr>
+                    <th scope="row">@vaga.Id</th>
+                    <td>@vaga.Titulo</td>
+                    <td>@vaga.Empresa</td>
+
+                    @if (@vaga.Situacao == SituacaoEnum.AnaliseCurriculo)
+                    {
+                        <td>Análise de curriculo</td>
+                    }
+                    else if (@vaga.Situacao == SituacaoEnum.FitCultural)
+                    {
+                        <td>Fit cultural</td>
+                    }
+                    else if (@vaga.Situacao == SituacaoEnum.Dinamica)
+                    {
+                        <td>Dinâmica</td>
+                    }
+                    else if (@vaga.Situacao == SituacaoEnum.Entrevista)
+                    {
+                        <td>Entrevista</td>
+                    }
+                    else if (@vaga.Situacao == SituacaoEnum.Teste)
+                    {
+                        <td>Teste</td>
+                    }
+                    else if (@vaga.Situacao == SituacaoEnum.Aprovado)
+                    {
+                        <td>Aprovado(a)</td>
+                    }
+                    else if (@vaga.Situacao == SituacaoEnum.Reprovado)
+                    {
+                        <td>Reprovado(a)</td>
+                    }
+                    <td>@vaga.Modalidade</td>
+
+                    <td>
+                        <a class="btn btn-primary" asp-route-id="@vaga.Id" asp-controller="Vaga" asp-action="Editar">Editar</a>
+                        <a class="btn btn-danger" asp-route-id="@vaga.Id" asp-controller="Vaga" asp-action="Excluir">Excluir</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div>
+        <h1 class="text-center">Você não tem vagas cadastradas!</h1>
+
+        <a asp-area="" asp-controller="Vaga" asp-action="Index">Cadastrar vaga</a>
+    </div>
+}
