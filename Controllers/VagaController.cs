@@ -4,7 +4,7 @@ using VagasDoc.Repository;
 using VagasDoc.Session;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CadastraVagas.Controllers
+namespace VagasDoc.Controllers
 {
     [FiltroUsuarioLogado]
     public class VagaController : Controller

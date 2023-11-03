@@ -13,6 +13,24 @@ html {
   min-height: 100%;
 }
 
-body {
+/*body {
   margin-bottom: 60px;
+}*/
+
+.loginContainer{
+    min-height: 80vh;
+}
+
+.div-com-imagem {
+    background-image: url('~/images/animacaoLogin.gif');
+    background-size: cover; /* Preenche a div mantendo a proporção */
+    background-repeat: no-repeat; /* Impede a repetição da imagem */
+    background-position: center; /* Centraliza a imagem na div */
+    width: 100%;
+    height: 100%;
+}
+
+.colLogin {
+    width: 90%;
+    height: 90%;
 }

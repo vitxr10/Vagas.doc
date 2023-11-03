@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\VagasDoc\\wwwroot\\images\\animacaoLogin.gif",
+      "PackagePath": "staticwebassets\\images\\animacaoLogin.gif"
+    },
+    {
       "Id": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\VagasDoc\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

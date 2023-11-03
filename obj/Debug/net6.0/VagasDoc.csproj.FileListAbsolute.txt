@@ -85,3 +85,4 @@ C:\Users\vitor\OneDrive\Área de Trabalho\VagasDoc\bin\Debug\net6.0\runtimes\bro
 C:\Users\vitor\OneDrive\Área de Trabalho\VagasDoc\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\vitor\OneDrive\Área de Trabalho\VagasDoc\obj\Debug\net6.0\VagasDoc.csproj.AssemblyReference.cache
 C:\Users\vitor\OneDrive\Área de Trabalho\VagasDoc\obj\Debug\net6.0\VagasDoc.csproj.CopyComplete
+C:\Users\vitor\OneDrive\Área de Trabalho\VagasDoc\obj\Debug\net6.0\scopedcss\Views\Shared\_LayoutDeslogado.cshtml.rz.scp.css

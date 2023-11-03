@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "TdVgydp3YnGCJRe47H0YOzvCNQKUIE3dGJtZ4D+mbcM=",
+  "Hash": "h9dzVI+eWwy04HktX1I38tSjb4W7cpfRE6ehl2cdDhY=",
   "Source": "VagasDoc",
   "BasePath": "_content/VagasDoc",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\VagasDoc\\wwwroot\\images\\animacaoLogin.gif",
+      "SourceId": "VagasDoc",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\VagasDoc\\wwwroot\\",
+      "BasePath": "_content/VagasDoc",
+      "RelativePath": "images/animacaoLogin.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\animacaoLogin.gif"
     },
     {
       "Identity": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\VagasDoc\\wwwroot\\js\\site.js",
