@@ -14,25 +14,25 @@
     </div>
 }
 
-    <div class="row align-items-center">
-    <div class="col div-com-imagem">
-        <img src="~/images/animacaoLogin.gif"/>
-        </div>
+<div class="row align-items-center">
     <div class="col">
-            <h1 class="text-center">Login</h1>
-            <form asp-controller="Login" asp-action="Entrar" method="post">
-                <div class="mb-3">
-                    <label for="login" class="form-label">Login:</label>
-                    <input type="email" class="form-control" asp-for="Login" required>
-                </div>
-                <div class="mb-3">
-                    <label for="senha" class="form-label">Senha:</label>
-                    <input type="password" class="form-control" asp-for="Senha" required>
-                </div>
-                <button type="submit" class="btn btn-primary btn-block">Entrar</button>
-            </form>
-            <div>
-                <p>Não tem uma conta? <a asp-controller="Usuario" asp-action="Index">Cadastre-se</a> </p>
+        <img src="~/images/animacaoLogin.gif" class="div-com-imagem" />
+    </div>
+    <div class="col">
+        <h1 class="text-center">Login</h1>
+        <form asp-controller="Login" asp-action="Entrar" method="post" class="d-flex justify-content-center flex-wrap">
+            <div class="mb-3 w-75">
+                <label for="login" class="form-label">Login:</label>
+                <input type="email" class="form-control " asp-for="Login" required>
             </div>
+            <div class="mb-3 w-75">
+                <label for="senha" class="form-label">Senha:</label>
+                <input type="password" class="form-control" asp-for="Senha" required>
+            </div>
+            <button type="submit" class="btn btn-primary mb-3 w-75">Entrar</button>
+        </form>
+        <div class="d-flex justify-content-center w-100">
+            <p class="w-75">Não tem uma conta? <a asp-controller="Usuario" asp-action="Index">Cadastre-se</a> </p>
         </div>
     </div>
+</div>
