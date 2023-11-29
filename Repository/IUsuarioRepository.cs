@@ -10,6 +10,6 @@ namespace VagasDoc.Repository
         UsuarioModel ListarPorId(int id);
         List<UsuarioModel> Listar();
         void Excluir(UsuarioModel usuario);
-        UsuarioModel AlterarSenha(UsuarioModel usuario);
+        void AlterarSenha(LoginModel login, UsuarioModel usuario);
     }
 }

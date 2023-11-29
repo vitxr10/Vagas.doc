@@ -1,5 +1,6 @@
 ﻿using VagasDoc.Data;
 using VagasDoc.Models;
+using VagasDoc.Session;
 
 namespace VagasDoc.Repository
 {
@@ -11,9 +12,12 @@ namespace VagasDoc.Repository
             _bancoContext = bancoContext;
         }
 
-        public UsuarioModel AlterarSenha(UsuarioModel usuario)
+        public void AlterarSenha(LoginModel login, UsuarioModel usuario)
         {
-            throw new NotImplementedException();
+            usuario.Senha = login.NovaSenha;
+
+            _bancoContext.Usuarios.Update(usuario);
+            _bancoContext.SaveChanges();
         }
 
         public UsuarioModel BuscarPorLogin(string login)

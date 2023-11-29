@@ -25,8 +25,6 @@ namespace VagasDoc.Controllers
         {
             try
             {
-                if (ModelState.IsValid)
-                {
                     UsuarioModel usuario = _usuariosRepository.BuscarPorLogin(loginModel.Login);
                     if (usuario != null)
                     {
@@ -41,7 +39,7 @@ namespace VagasDoc.Controllers
                     {
                         TempData["MensagemErro"] = "Email e/ou senha inválido(s), tente novamente.";
                     }
-                }
+
                 return View("Index");
             }
             catch (Exception e)
