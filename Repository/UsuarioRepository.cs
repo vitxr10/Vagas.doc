@@ -1,6 +1,6 @@
 ﻿using VagasDoc.Data;
+using VagasDoc.Helper;
 using VagasDoc.Models;
-using VagasDoc.Session;
 
 namespace VagasDoc.Repository
 {
@@ -12,9 +12,10 @@ namespace VagasDoc.Repository
             _bancoContext = bancoContext;
         }
 
-        public void AlterarSenha(LoginModel login, UsuarioModel usuario)
+        public void AlterarSenha(AlterarSenhaModel alterarSenhaModel, UsuarioModel usuario)
         {
-            usuario.Senha = login.NovaSenha;
+            var novaSenha = alterarSenhaModel.NovaSenha;
+            usuario.Senha = Cripto.Encrypt(novaSenha);
 
             _bancoContext.Usuarios.Update(usuario);
             _bancoContext.SaveChanges();
@@ -28,24 +29,10 @@ namespace VagasDoc.Repository
         public UsuarioModel Criar(UsuarioModel usuario)
         {
             usuario.DataCadastro = DateTime.Now;
+            usuario.Senha = Cripto.Encrypt(usuario.Senha);
             _bancoContext.Usuarios.Add(usuario);
             _bancoContext.SaveChanges();
             return usuario;
-        }
-
-        public UsuarioModel Editar(UsuarioModel usuario)
-        {
-            UsuarioModel usuarioDB = ListarPorId(usuario.Id);
-
-            usuarioDB.Nome = usuario.Nome;
-            usuarioDB.Nome = usuario.Login;
-            usuarioDB.Nome = usuario.Senha;
-            usuarioDB.DataAtualizacao = DateTime.Now;
-
-            _bancoContext.Usuarios.Update(usuarioDB);
-            _bancoContext.SaveChanges();
-
-            return usuarioDB;
         }
 
         public void Excluir(UsuarioModel usuario)

@@ -1,7 +1,7 @@
 ﻿using VagasDoc.Filters;
 using VagasDoc.Models;
 using VagasDoc.Repository;
-using VagasDoc.Session;
+using VagasDoc.Helper;
 using Microsoft.AspNetCore.Mvc;
 
 namespace VagasDoc.Controllers

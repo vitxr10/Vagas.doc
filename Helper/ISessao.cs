@@ -1,6 +1,6 @@
 ﻿using VagasDoc.Models;
 
-namespace VagasDoc.Session
+namespace VagasDoc.Helper
 {
     public interface ISessao
     {

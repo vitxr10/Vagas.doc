@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using VagasDoc.Helper;
 using VagasDoc.Models;
 using VagasDoc.Repository;
-using VagasDoc.Session;
 
 namespace VagasDoc.Controllers
 {
@@ -25,20 +25,23 @@ namespace VagasDoc.Controllers
         {
             try
             {
-                    UsuarioModel usuario = _usuariosRepository.BuscarPorLogin(loginModel.Login);
-                    if (usuario != null)
+                UsuarioModel usuario = _usuariosRepository.BuscarPorLogin(loginModel.Login);
+                if (usuario != null)
+                {
+                    var senha = loginModel.Senha;
+                    senha = Cripto.Encrypt(senha);
+
+                    if (usuario.SenhaValida(senha))
                     {
-                        if (usuario.SenhaValida(loginModel.Senha))
-                        {
-                            _sessao.CriarSessaoUsuario(usuario);
-                            return RedirectToAction("Index", "Home");
-                        }
-                        TempData["MensagemErro"] = "Senha inválida, tente novamente.";
+                        _sessao.CriarSessaoUsuario(usuario);
+                        return RedirectToAction("Index", "Home");
                     }
-                    else
-                    {
-                        TempData["MensagemErro"] = "Email e/ou senha inválido(s), tente novamente.";
-                    }
+                    TempData["MensagemErro"] = "Senha inválida, tente novamente.";
+                }
+                else
+                {
+                    TempData["MensagemErro"] = "Email e/ou senha inválido(s), tente novamente.";
+                }
 
                 return View("Index");
             }

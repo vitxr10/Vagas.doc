@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using VagasDoc.Data;
 using VagasDoc.Repository;
-using VagasDoc.Session;
+using VagasDoc.Helper;
 
 var builder = WebApplication.CreateBuilder(args);
 
