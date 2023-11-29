@@ -1,4 +1,4 @@
-﻿@model LoginModel
+﻿@model AlterarSenhaModel
 @{
 }
 
@@ -17,7 +17,7 @@
 <form asp-controller="Usuario" asp-action="AlterarSenha" method="post">
     <div class="mb-3">
         <label for="senha" class="form-label">Senha atual:</label>
-        <input type="password" class="form-control" asp-for="Senha" required>
+        <input type="password" class="form-control" asp-for="SenhaAtual" required>
     </div>
     <div class="mb-3">
         <label for="senha" class="form-label">Nova senha:</label>

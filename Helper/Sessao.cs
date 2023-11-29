@@ -1,7 +1,7 @@
 ﻿using System.Text.Json;
 using VagasDoc.Models;
 
-namespace VagasDoc.Session
+namespace VagasDoc.Helper
 {
     public class Sessao : ISessao
     {

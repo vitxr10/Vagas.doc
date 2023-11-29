@@ -6,10 +6,9 @@ namespace VagasDoc.Repository
     {
         UsuarioModel BuscarPorLogin(string login);
         UsuarioModel Criar(UsuarioModel usuario);
-        UsuarioModel Editar(UsuarioModel usuario);
         UsuarioModel ListarPorId(int id);
         List<UsuarioModel> Listar();
         void Excluir(UsuarioModel usuario);
-        void AlterarSenha(LoginModel login, UsuarioModel usuario);
+        void AlterarSenha(AlterarSenhaModel alterarSenhaModel, UsuarioModel usuario);
     }
 }

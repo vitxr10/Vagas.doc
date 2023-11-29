@@ -4,7 +4,7 @@ using VagasDoc.Repository;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using VagasDoc.Data;
-using VagasDoc.Session;
+using VagasDoc.Helper;
 
 namespace VagasDoc.Controllers
 {
@@ -21,13 +21,6 @@ namespace VagasDoc.Controllers
         public IActionResult Index()
         {
             return View();
-        }
-
-        [FiltroUsuarioLogado]
-        public IActionResult Editar(int id)
-        {
-            UsuarioModel usuario = _usuarioRepository.ListarPorId(id);
-            return View(usuario);
         }
 
         [FiltroUsuarioLogado]
@@ -52,14 +45,6 @@ namespace VagasDoc.Controllers
 
         [FiltroUsuarioLogado]
         [HttpPost]
-        public IActionResult Editar(UsuarioModel usuario)
-        {
-            _usuarioRepository.Editar(usuario);
-            return RedirectToAction("Index", "Home");
-        }
-
-        [FiltroUsuarioLogado]
-        [HttpPost]
         public IActionResult Excluir(UsuarioModel usuario)
         {
             _usuarioRepository.Excluir(usuario);
@@ -68,23 +53,26 @@ namespace VagasDoc.Controllers
 
         [FiltroUsuarioLogado]
         [HttpPost]
-        public IActionResult AlterarSenha(LoginModel login)
+        public IActionResult AlterarSenha(AlterarSenhaModel alterarSenhaModel)
         {
             UsuarioModel usuario = _sessao.BuscarSessaoUsuario();
 
-            if (!(string.Equals(login.Senha, usuario.Senha)))
+            var senhaAtual = alterarSenhaModel.SenhaAtual;
+            senhaAtual = Cripto.Encrypt(senhaAtual);
+
+            if (!(string.Equals(senhaAtual, usuario.Senha)))
             {
                 TempData["MensagemErro"] = "Senha atual incorreta.";
                 return RedirectToAction("AlterarSenha", "Usuario");
             }
 
-            if (!(string.Equals(login.NovaSenha, login.ConfirmacaoNovaSenha)))
+            if (!(string.Equals(alterarSenhaModel.NovaSenha, alterarSenhaModel.ConfirmacaoNovaSenha)))
             {
                 TempData["MensagemErro"] = "A nova senha não coincide com a confirmação.";
                 return RedirectToAction("AlterarSenha", "Usuario");
             }
 
-            _usuarioRepository.AlterarSenha(login, usuario);
+            _usuarioRepository.AlterarSenha(alterarSenhaModel, usuario);
             return RedirectToAction("Index", "Home");
         }
     }
