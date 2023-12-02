@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\images\\animacaoLogin.gif"
     },
     {
+      "Id": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\VagasDoc\\wwwroot\\images\\job1.jpg",
+      "PackagePath": "staticwebassets\\images\\job1.jpg"
+    },
+    {
       "Id": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\VagasDoc\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
