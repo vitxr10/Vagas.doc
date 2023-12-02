@@ -68,7 +68,7 @@ namespace VagasDoc.Controllers
 
             if (!(string.Equals(alterarSenhaModel.NovaSenha, alterarSenhaModel.ConfirmacaoNovaSenha)))
             {
-                TempData["MensagemErro"] = "A nova senha não coincide com a confirmação.";
+                TempData["MensagemErro"] = "A senha nova não coincide com a confirmação.";
                 return RedirectToAction("AlterarSenha", "Usuario");
             }
 

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "h9dzVI+eWwy04HktX1I38tSjb4W7cpfRE6ehl2cdDhY=",
+  "Hash": "4WNkelaPn+z67UeljEXkG4U72rVaF9qd7RDmYJbpQNU=",
   "Source": "VagasDoc",
   "BasePath": "_content/VagasDoc",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\animacaoLogin.gif"
+    },
+    {
+      "Identity": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\VagasDoc\\wwwroot\\images\\job1.jpg",
+      "SourceId": "VagasDoc",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\VagasDoc\\wwwroot\\",
+      "BasePath": "_content/VagasDoc",
+      "RelativePath": "images/job1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\job1.jpg"
     },
     {
       "Identity": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\VagasDoc\\wwwroot\\js\\site.js",
