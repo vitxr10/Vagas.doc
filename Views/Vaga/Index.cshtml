@@ -30,7 +30,7 @@
             <div class="col mb-3">
                 <label for="situacaoVaga" class="form-label">Situação:</label>
                 <select class="form-select" asp-for="Situacao" required>
-                    <option value="" selected>Selecione a situação da vaga</option>
+                    <option value="" selected disabled>Selecione a situação da vaga</option>
                     <option value="@SituacaoEnum.AnaliseCurriculo">Análise de currículo</option>
                     <option value="@SituacaoEnum.FitCultural">Fit cultural</option>
                     <option value="@SituacaoEnum.Dinamica">Dinâmica</option>
@@ -44,7 +44,7 @@
         <div class="mb-3">
             <label for="modalidade">Modalidade:</label>
             <select class="form-select" asp-for="Modalidade" required>
-                <option value="" selected>Selecione a modalidade</option>
+                <option value="" selected disabled>Selecione a modalidade</option>
                 <option value="@ModalidadeEnum.Presencial">Presencial</option>
                 <option value="@ModalidadeEnum.Hibrido">Híbrido</option>
                 <option value="@ModalidadeEnum.Remoto">Remoto</option>
