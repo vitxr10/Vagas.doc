@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4WNkelaPn+z67UeljEXkG4U72rVaF9qd7RDmYJbpQNU=",
+  "Hash": "MbX/RseTligPtwgiG2qwEmQc25ECH3QRx9qDWfzk2yk=",
   "Source": "VagasDoc",
   "BasePath": "_content/VagasDoc",
   "Mode": "Default",
@@ -117,6 +117,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\job1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\VagasDoc\\wwwroot\\images\\jobsHome.png",
+      "SourceId": "VagasDoc",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\VagasDoc\\wwwroot\\",
+      "BasePath": "_content/VagasDoc",
+      "RelativePath": "images/jobsHome.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\jobsHome.png"
+    },
+    {
+      "Identity": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\VagasDoc\\wwwroot\\images\\teste.png",
+      "SourceId": "VagasDoc",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\VagasDoc\\wwwroot\\",
+      "BasePath": "_content/VagasDoc",
+      "RelativePath": "images/teste.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\teste.png"
     },
     {
       "Identity": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\VagasDoc\\wwwroot\\js\\site.js",

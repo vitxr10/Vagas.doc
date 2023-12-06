@@ -3,12 +3,26 @@
     ViewData["Title"] = "Vagas.doc";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Bem vindo, @Model.Nome!</h1>
+<div class="text-center mb-5">
+    <h1>Bem vindo, @Model.Nome!</h1>
+    <h4>Tem vaguinha nova pra cadastrar hoje?</h4>
 </div>
 
-<div>
-    <button class="btn btn-primary"><a asp-area="" asp-controller="Vaga" asp-action="Index" class="text-light text-decoration-none">Cadastrar vaga</a></button>
+<div class="mb-4 d-flex justify-content-center">
+    <button class="btn btn-primary me-5"><a asp-area="" asp-controller="Vaga" asp-action="Index" class="text-light text-decoration-none">Cadastrar vaga</a></button>
     <button class="btn btn-primary"><a asp-area="" asp-controller="Vaga" asp-action="Index" class="text-light text-decoration-none">Ver vagas</a></button>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col fs-4 text txt-estilo mt-5">
+            <p>
+                O Vagas.doc é um projeto desenvolvido para ajudar pessoas em busca de emprego a gerenciar suas candidaturas de maneira organizada. Com ele, é possível registrar todas as vagas às quais se candidataram e manter atualizada a situação de cada uma à medida que o processo seletivo avança.
+            </p>
+        </div>
+        <div class="col d-flex justify-content-center">
+            <img src="~/images/jobsHome.png" class="img-jobs-home" />
+        </div>
+    </div>
 </div>
 

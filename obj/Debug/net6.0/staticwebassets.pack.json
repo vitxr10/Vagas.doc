@@ -21,6 +21,14 @@
       "PackagePath": "staticwebassets\\images\\job1.jpg"
     },
     {
+      "Id": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\VagasDoc\\wwwroot\\images\\jobsHome.png",
+      "PackagePath": "staticwebassets\\images\\jobsHome.png"
+    },
+    {
+      "Id": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\VagasDoc\\wwwroot\\images\\teste.png",
+      "PackagePath": "staticwebassets\\images\\teste.png"
+    },
+    {
       "Id": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\VagasDoc\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

@@ -41,3 +41,11 @@ body {
     object-position: 0 40%;
     height: 250px;
 }
+
+.txt-estilo {
+    text-align: justify;
+}
+
+.img-jobs-home{
+    width:60%;
+}
