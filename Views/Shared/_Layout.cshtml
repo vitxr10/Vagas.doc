@@ -43,14 +43,38 @@
         </main>
     </div>
 
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
     <footer class="border-top footer text-light">
         <div class="container">
-            &copy; 2023 - Desenvolvido por Vitor Santos Alves
+            <div class="row">
+                <div class="col">
+                    &copy; 2023 - Desenvolvido por Vitor Santos Alves
+                </div>
+                <div class="col text-end">
+                    <a href="https://www.linkedin.com/in/vitorsantosalves-dev/" target="_blank" class="text-decoration-none">
+                        <i class="fs-3 text fa-brands fa-linkedin text-light"></i>
+                    </a>  
+                    <a href="https://github.com/vitxr10" target="_blank" class="text-decoration-none">
+                        <i class="fs-3 text fa-brands fa-github text-light"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+    <script src="https://kit.fontawesome.com/ffac436eac.js" crossorigin="anonymous"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
