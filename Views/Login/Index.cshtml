@@ -20,18 +20,18 @@
     </div>
     <div class="col">
         <h1 class="text-center">Login</h1>
-        <form asp-controller="Login" asp-action="Entrar" method="post" class="d-flex justify-content-center flex-wrap">
+        <form asp-controller="Login" asp-action="Entrar" method="post" class="d-flex justify-content-center flex-wrap fs-5">
             <div class="mb-3 w-75">
                 <label for="login" class="form-label">Login:</label>
-                <input type="email" class="form-control " asp-for="Login" required>
+                <input type="email" class="form-control fs-5" asp-for="Login" required>
             </div>
-            <div class="mb-3 w-75">
+            <div class="mb-4 w-75">
                 <label for="senha" class="form-label">Senha:</label>
-                <input type="password" class="form-control" asp-for="Senha" required>
+                <input type="password" class="form-control fs-5" asp-for="Senha" required>
             </div>
-            <button type="submit" class="btn btn-primary mb-3 w-75">Entrar</button>
+            <button type="submit" class="btn btn-primary mb-3 w-75 fs-5">Entrar</button>
         </form>
-        <div class="d-flex justify-content-center w-100">
+        <div class="d-flex justify-content-center w-100  fs-5">
             <p class="w-75">Não tem uma conta? <a asp-controller="Usuario" asp-action="Index">Cadastre-se</a> </p>
         </div>
     </div>
