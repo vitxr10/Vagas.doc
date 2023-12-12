@@ -6,30 +6,30 @@
     </div>
 
 
-    <form class="container" asp-controller="Vaga" asp-action="Criar" method="post">
+    <form class="container fs-5" asp-controller="Vaga" asp-action="Criar" method="post">
         <div class="row">
             <div class="col mb-3">
                 <label for="tituloVaga" class="form-label">Título:</label>
-                <input type="text" class="form-control" asp-for="Titulo" placeholder="Ex: Analista de dados" required>
+                <input type="text" class="form-control fs-5" asp-for="Titulo" placeholder="Ex: Analista de dados" required>
             </div>
             <div class="col mb-3">
                 <label for="empresa" class="form-label">Empresa:</label>
-                <input type="text" class="form-control" asp-for="Empresa" required>
+                <input type="text" class="form-control fs-5" asp-for="Empresa" required>
             </div>
         </div>
 
         <div class="mb-3">
             <label for="descricaoVaga">Descrição da vaga:</label>
-            <textarea class="form-control" placeholder="Descreva os requisitos da vaga aqui" asp-for="Descricao"></textarea>
+            <textarea class="form-control fs-5" placeholder="Descreva os requisitos da vaga aqui" asp-for="Descricao"></textarea>
         </div>
         <div class="row">
             <div class="col mb-3">
                 <label for="link" class="form-label">Link:</label>
-                <input type="text" class="form-control" asp-for="Link">
+                <input type="text" class="form-control fs-5" asp-for="Link">
             </div>
             <div class="col mb-3">
                 <label for="situacaoVaga" class="form-label">Situação:</label>
-                <select class="form-select" asp-for="Situacao" required>
+                <select class="form-select fs-5" asp-for="Situacao" required>
                     <option value="" selected disabled>Selecione a situação da vaga</option>
                     <option value="@SituacaoEnum.AnaliseCurriculo">Análise de currículo</option>
                     <option value="@SituacaoEnum.FitCultural">Fit cultural</option>
@@ -43,15 +43,15 @@
         </div>
         <div class="mb-3">
             <label for="modalidade">Modalidade:</label>
-            <select class="form-select" asp-for="Modalidade" required>
+            <select class="form-select fs-5" asp-for="Modalidade" required>
                 <option value="" selected disabled>Selecione a modalidade</option>
                 <option value="@ModalidadeEnum.Presencial">Presencial</option>
                 <option value="@ModalidadeEnum.Hibrido">Híbrido</option>
                 <option value="@ModalidadeEnum.Remoto">Remoto</option>
             </select>
         </div>
-        <button type="submit" class="btn btn-primary">Cadastrar</button>
-        <a class="btn btn-secondary" asp-area="" asp-controller="Vaga" asp-action="Listar">Voltar</a>
+        <button type="submit" class="btn btn-primary fs-5">Cadastrar</button>
+        <a class="btn btn-secondary fs-5" asp-area="" asp-controller="Vaga" asp-action="Listar">Voltar</a>
     </form>
 
 }

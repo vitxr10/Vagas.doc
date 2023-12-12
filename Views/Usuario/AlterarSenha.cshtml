@@ -14,19 +14,19 @@
     </div>
 }
 
-<form asp-controller="Usuario" asp-action="AlterarSenha" method="post">
+<form asp-controller="Usuario" asp-action="AlterarSenha" method="post" class="fs-5">
     <div class="mb-3">
         <label for="senha" class="form-label">Senha atual:</label>
-        <input type="password" class="form-control" asp-for="SenhaAtual" required>
+        <input type="password" class="form-control fs-5" asp-for="SenhaAtual" required>
     </div>
     <div class="mb-3">
         <label for="senha" class="form-label">Nova senha:</label>
-        <input type="password" class="form-control" asp-for="NovaSenha" required>
+        <input type="password" class="form-control fs-5" asp-for="NovaSenha" required>
     </div>
     <div class="mb-3">
         <label for="senha" class="form-label">Confirmar nova senha:</label>
-        <input type="password" class="form-control" asp-for="ConfirmacaoNovaSenha" required>
+        <input type="password" class="form-control fs-5" asp-for="ConfirmacaoNovaSenha" required>
     </div>
-    <button type="submit" class="btn btn-primary btn-block">Salvar</button>
-    <a class="btn btn-secondary" asp-controller="Home" asp-action="Index">Voltar</a>
+    <button type="submit" class="btn btn-primary btn-block fs-5">Salvar</button>
+    <a class="btn btn-secondary fs-5" asp-controller="Home" asp-action="Index">Voltar</a>
 </form>

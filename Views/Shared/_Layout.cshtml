@@ -13,13 +13,13 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand text-light" asp-area="" asp-controller="Home" asp-action="Index">Vagas.doc</a>
+                <a class="navbar-brand text-light fs-5 text" asp-area="" asp-controller="Home" asp-action="Index">Vagas.doc</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse">
-                    <ul class="navbar-nav flex-grow-1 d-flex justify-content-end">
+                    <ul class="navbar-nav flex-grow-1 d-flex justify-content-end fs-5 text">
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
@@ -49,21 +49,17 @@
             <div class="vw-plugin-top-wrapper"></div>
         </div>
     </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
 
     <footer class="border-top footer text-light">
         <div class="container">
             <div class="row">
-                <div class="col">
+                <div class="col fs-5">
                     &copy; 2023 - Desenvolvido por Vitor Santos Alves
                 </div>
                 <div class="col text-end">
                     <a href="https://www.linkedin.com/in/vitorsantosalves-dev/" target="_blank" class="text-decoration-none">
                         <i class="fs-3 text fa-brands fa-linkedin text-light"></i>
-                    </a>  
+                    </a>
                     <a href="https://github.com/vitxr10" target="_blank" class="text-decoration-none">
                         <i class="fs-3 text fa-brands fa-github text-light"></i>
                     </a>
@@ -71,6 +67,11 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
