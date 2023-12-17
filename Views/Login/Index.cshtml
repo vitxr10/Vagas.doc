@@ -6,8 +6,8 @@
 
 @if (TempData["MensagemErro"] != null)
 {
-    <div class="alert alert-danger d-flex align-items-center" role="alert">
-        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill" /></svg>
+    <div class="alerta alerta-erro" role="alert">
+        <button class="close-alert">X</button>
         <div>
             @TempData["MensagemErro"]
         </div>
@@ -25,10 +25,12 @@
                 <label for="login" class="form-label">Login:</label>
                 <input type="email" class="form-control fs-5" asp-for="Login" required>
             </div>
-            <div class="mb-4 w-75">
+            <div class="mb-3 w-75">
                 <label for="senha" class="form-label">Senha:</label>
                 <input type="password" class="form-control fs-5" asp-for="Senha" required>
+                <a asp-controller="Login" asp-action="EsqueciMinhaSenha">Esqueci Minha Senha</a>
             </div>
+
             <div class="mb-4 w-75 d-flex justify-content-center">
                 <div class="cf-turnstile" data-sitekey="0x4AAAAAAAOsP8bzb0-pXTOi"></div>
             </div>

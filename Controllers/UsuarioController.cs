@@ -11,11 +11,9 @@ namespace VagasDoc.Controllers
     public class UsuarioController : Controller
     {
         private readonly IUsuarioRepository _usuarioRepository;
-        private readonly ISessao _sessao;
-        public UsuarioController(IUsuarioRepository usuarioRepository, ISessao sessao)
+        public UsuarioController(IUsuarioRepository usuarioRepository)
         {
             _usuarioRepository = usuarioRepository;
-            _sessao = sessao;
         }
 
         public IActionResult Index()
@@ -51,29 +49,6 @@ namespace VagasDoc.Controllers
             return RedirectToAction("Index", "Login");
         }
 
-        [FiltroUsuarioLogado]
-        [HttpPost]
-        public IActionResult AlterarSenha(AlterarSenhaModel alterarSenhaModel)
-        {
-            UsuarioModel usuario = _sessao.BuscarSessaoUsuario();
-
-            var senhaAtual = alterarSenhaModel.SenhaAtual;
-            senhaAtual = Cripto.Encrypt(senhaAtual);
-
-            if (!(string.Equals(senhaAtual, usuario.Senha)))
-            {
-                TempData["MensagemErro"] = "Senha atual incorreta.";
-                return RedirectToAction("AlterarSenha", "Usuario");
-            }
-
-            if (!(string.Equals(alterarSenhaModel.NovaSenha, alterarSenhaModel.ConfirmacaoNovaSenha)))
-            {
-                TempData["MensagemErro"] = "A senha nova não coincide com a confirmação.";
-                return RedirectToAction("AlterarSenha", "Usuario");
-            }
-
-            _usuarioRepository.AlterarSenha(alterarSenhaModel, usuario);
-            return RedirectToAction("Index", "Home");
-        }
+        
     }
 }

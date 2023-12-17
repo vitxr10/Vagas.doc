@@ -16,12 +16,20 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\vitor\OneDrive\Área de Trabalho\VagasDoc
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/vitor/OneDrive/Área de Trabalho/VagasDoc/Views/AlterarSenha/AlterarSenha.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx0ZXJhclNlbmhhXEFsdGVyYXJTZW5oYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/vitor/OneDrive/Área de Trabalho/VagasDoc/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/vitor/OneDrive/Área de Trabalho/VagasDoc/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vitor/OneDrive/Área de Trabalho/VagasDoc/Views/Login/EsqueciMinhaSenha.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cRXNxdWVjaU1pbmhhU2VuaGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/vitor/OneDrive/Área de Trabalho/VagasDoc/Views/Login/Index.cshtml]
@@ -38,10 +46,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/vitor/OneDrive/Área de Trabalho/VagasDoc/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/vitor/OneDrive/Área de Trabalho/VagasDoc/Views/Usuario/AlterarSenha.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xBbHRlcmFyU2VuaGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/vitor/OneDrive/Área de Trabalho/VagasDoc/Views/Usuario/Editar.cshtml]
