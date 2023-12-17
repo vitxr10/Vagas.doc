@@ -12,15 +12,6 @@ namespace VagasDoc.Repository
             _bancoContext = bancoContext;
         }
 
-        public void AlterarSenha(AlterarSenhaModel alterarSenhaModel, UsuarioModel usuario)
-        {
-            var novaSenha = alterarSenhaModel.NovaSenha;
-            usuario.Senha = Cripto.Encrypt(novaSenha);
-
-            _bancoContext.Usuarios.Update(usuario);
-            _bancoContext.SaveChanges();
-        }
-
         public UsuarioModel BuscarPorLogin(string login)
         {
             return _bancoContext.Usuarios.FirstOrDefault(x => x.Login == login);

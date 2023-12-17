@@ -49,3 +49,49 @@ body {
 .img-jobs-home{
     width:60%;
 }
+
+.alerta {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    padding: 15px;
+    color: white;
+    margin-bottom: 15px;
+    width: 25%;
+}
+
+.alerta-erro {
+    background-color: #f44336;
+}
+
+.alerta-sucesso {
+    background-color: #2EB886;
+}
+
+/* The close button */
+.close-alert {
+    background-color: transparent;
+    border: none;
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 16px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+    /* When moving the mouse over the close button */
+    .close-alert:hover {
+        color: black;
+    }
+
+/*.close-alert{
+    position: absolute;
+    right: -10px;
+    top: -15px;
+    border-radius: 15px;
+    width: 30px;
+    height: 31px;
+}*/

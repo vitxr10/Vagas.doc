@@ -1,5 +1,6 @@
 ﻿using Azure;
 using Microsoft.AspNetCore.Mvc;
+using VagasDoc.Data;
 using VagasDoc.Helper;
 using VagasDoc.Models;
 using VagasDoc.Repository;
@@ -11,15 +12,27 @@ namespace VagasDoc.Controllers
         private readonly IUsuarioRepository _usuariosRepository;
         private readonly ISessao _sessao;
         private readonly IConfiguration _configuration;
-        public LoginController(IUsuarioRepository usuarioRepository, ISessao sessao, IConfiguration configuration)
+        private readonly IEmail _email;
+        private readonly BancoContext _bancoContext;
+        public LoginController(IUsuarioRepository usuarioRepository, ISessao sessao, IConfiguration configuration, IEmail email, BancoContext bancoContext)
         {
             _usuariosRepository = usuarioRepository;
             _sessao = sessao;
             _configuration = configuration;
+            _email = email;
+            _bancoContext = bancoContext;
         }
+
+        [HttpGet]
         public IActionResult Index()
         {
             //if (_sessao.BuscarSessaoUsuario != null) return RedirectToAction("Index", "Home");
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult EsqueciMinhaSenha()
+        {
             return View();
         }
 
@@ -30,7 +43,7 @@ namespace VagasDoc.Controllers
 
             if (!string.IsNullOrEmpty(token) )
             {
-                var tokenValido = await ValidaCaptcha(token);
+                var tokenValido = await ValidaCaptchaAsync(token);
                 if (!tokenValido)
                 {
                     TempData["MensagemErro"] = "Captcha inválido.";
@@ -75,7 +88,8 @@ namespace VagasDoc.Controllers
 
         }
 
-        public async Task<bool> ValidaCaptcha(string token)
+        [HttpPost]
+        public async Task<bool> ValidaCaptchaAsync(string token)
         {
             var url = "https://challenges.cloudflare.com/turnstile/v0/siteverify";
 
@@ -103,6 +117,39 @@ namespace VagasDoc.Controllers
             }
 
             return false;
+        }
+
+        [HttpPost]
+        public IActionResult EsqueciMinhaSenha(string login)
+        {
+            UsuarioModel usuario = _usuariosRepository.BuscarPorLogin(login);
+
+            if (usuario == null)
+            {
+                TempData["MensagemErro"] = "Este login não existe.";
+                return RedirectToAction("EsqueciMinhaSenha");
+            }
+
+            Random random = new Random();
+            var novaSenha = random.Next();
+
+            string mensagem = $"Sua nova senha é {novaSenha}";
+            string assunto = "Redefinição de senha";
+
+            if (_email.Enviar(usuario.Login, assunto, mensagem))
+            {
+                usuario.Senha = Cripto.Encrypt(Convert.ToString(novaSenha));
+                _bancoContext.Usuarios.Update(usuario);
+                _bancoContext.SaveChanges();
+
+                TempData["MensagemSucesso"] = "Email enviado.";
+                return RedirectToAction("EsqueciMinhaSenha");
+            }
+            else
+            {
+                TempData["MensagemErro"] = "Não foi possível redefinir sua senha.";
+                return RedirectToAction("EsqueciMinhaSenha");
+            }
         }
 
         public IActionResult Sair()
