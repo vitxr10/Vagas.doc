@@ -71,11 +71,11 @@ namespace VagasDoc.Controllers
                         _sessao.CriarSessaoUsuario(usuario);
                         return RedirectToAction("Index", "Home");
                     }
-                    TempData["MensagemErro"] = "Senha inválida, tente novamente.";
+                    TempData["MensagemErro"] = "Senha inválida.";
                 }
                 else
                 {
-                    TempData["MensagemErro"] = "Email e/ou senha inválido(s), tente novamente.";
+                    TempData["MensagemErro"] = "Email e/ou senha inválido(s).";
                 }
 
                 return View("Index");
@@ -152,6 +152,7 @@ namespace VagasDoc.Controllers
             }
         }
 
+        [HttpGet]
         public IActionResult Sair()
         {
             _sessao.RemoverSessaoUsuario();

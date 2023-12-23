@@ -17,11 +17,13 @@ namespace VagasDoc.Controllers
             _sessao = sessao;
         }
 
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
         }
 
+        [HttpGet]
         public IActionResult Listar()
         {
             UsuarioModel usuarioLogado = _sessao.BuscarSessaoUsuario();
@@ -30,12 +32,14 @@ namespace VagasDoc.Controllers
             return View(listaVagas);
         }
 
+        [HttpGet]
         public IActionResult Editar(int id)
         {
             VagaModel vaga = _vagaRepository.ListarPorId(id);
             return View(vaga);
         }
 
+        [HttpGet]
         public IActionResult Excluir(int id)
         {
             VagaModel vaga = _vagaRepository.ListarPorId(id);
