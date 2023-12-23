@@ -7,27 +7,24 @@ using VagasDoc.Repository;
 
 namespace VagasDoc.Controllers
 {
+    [FiltroUsuarioLogado]
     public class AlterarSenhaController : Controller
     {
         private readonly ISessao _sessao;
-        private readonly IUsuarioRepository _usuarioRepository;
         private readonly BancoContext _bancoContext;
 
-        public AlterarSenhaController(ISessao sessao, IUsuarioRepository usuarioRepository, BancoContext bancoContext)
+        public AlterarSenhaController(ISessao sessao, BancoContext bancoContext)
         {
             _sessao = sessao;
-            _usuarioRepository = usuarioRepository;
             _bancoContext = bancoContext;
         }
 
-        [FiltroUsuarioLogado]
         [HttpGet]
         public IActionResult AlterarSenha()
         {
             return View();
         }
 
-        [FiltroUsuarioLogado]
         [HttpPost]
         public IActionResult AlterarSenha(AlterarSenhaModel alterarSenhaModel)
         {
@@ -50,6 +47,7 @@ namespace VagasDoc.Controllers
 
             var novaSenha = Cripto.Encrypt(alterarSenhaModel.NovaSenha);
             usuario.Senha = novaSenha;
+            usuario.DataAtualizacao = DateTime.Now;
 
             _bancoContext.Usuarios.Update(usuario);
             _bancoContext.SaveChanges();

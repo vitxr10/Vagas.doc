@@ -3,12 +3,12 @@
     Layout = "_LayoutDeslogado";
     ViewData["Title"] = "Nova conta";
 }
-<div>
+@* <div>
     <h1 class="text-center">Cadastrar nova conta</h1>
-</div>
+</div> *@
 
 
-<form class="container" asp-controller="Usuario" asp-action="Criar" method="post">
+@* <form class="container" asp-controller="Usuario" asp-action="Criar" method="post">
     <div class="mb-3">
         <label for="tituloVaga" class="form-label">Nome:</label>
         <input type="text" class="form-control" asp-for="Nome" placeholder="Digite seu nome" required>
@@ -24,4 +24,26 @@
 
     <button type="submit" class="btn btn-primary">Cadastrar</button>
     <a class="btn btn-secondary" asp-area="" asp-controller="Login">Voltar</a>
-</form>
+</form> *@
+
+<div class="container-fluid d-flex flex-column align-items-center fs-5 mt-5">
+    <form asp-controller="Usuario" asp-action="Criar" method="post" class="border border-white rounded px-5 py-4">
+        <h1 class="text-center mb-4">Cadastrar nova conta</h1>
+        <div class="mb-3 w-100">
+            <label for="nome" class="form-label">Nome:</label>
+            <input type="text" class="form-control fs-5" asp-for="Nome" placeholder="Digite seu nome" required>
+        </div>
+        <div class="mb-3 w-100">
+            <label for="login" class="form-label">Email:</label>
+            <input type="email" class="form-control fs-5" asp-for="Login" placeholder="Ex: username@email.com" required>
+        </div>
+        <div class="mb-4 w-100">
+            <label for="senha" class="form-label">Senha:</label>
+            <input type="password" class="form-control fs-5" asp-for="Senha" placeholder="Digite uma senha" required>
+        </div>
+        <button type="submit" class="btn btn-primary mb-1 w-100 fs-5">Cadastrar</button>
+        <div class="w-100 fs-5">
+            <a asp-controller="Login" asp-action="Index" class="text-light">Voltar</a>
+        </div>
+    </form>
+</div>

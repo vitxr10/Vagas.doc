@@ -14,32 +14,29 @@
     </div>
 }
 
-<div class="row align-items-center">
-    <div class="col">
-        <img src="~/images/animacaoLogin.gif" class="div-com-imagem" />
-    </div>
-    <div class="col">
+<div class="container-fluid d-flex flex-column align-items-center fs-5 mt-5">
+    <form asp-controller="Login" asp-action="Entrar" method="post" class="border border-white rounded px-5 py-5">
         <h1 class="text-center">Login</h1>
-        <form asp-controller="Login" asp-action="Entrar" method="post" class="d-flex justify-content-center flex-wrap fs-5">
-            <div class="mb-3 w-75">
-                <label for="login" class="form-label">Login:</label>
-                <input type="email" class="form-control fs-5" asp-for="Login" required>
-            </div>
-            <div class="mb-3 w-75">
-                <label for="senha" class="form-label">Senha:</label>
-                <input type="password" class="form-control fs-5" asp-for="Senha" required>
-                <a asp-controller="Login" asp-action="EsqueciMinhaSenha">Esqueci Minha Senha</a>
-            </div>
-
-            <div class="mb-4 w-75 d-flex justify-content-center">
-                <div class="cf-turnstile" data-sitekey="0x4AAAAAAAOsP8bzb0-pXTOi"></div>
-            </div>
-            <button type="submit" class="btn btn-primary mb-3 w-75 fs-5">Entrar</button>
-        </form>
-        <div class="d-flex justify-content-center w-100  fs-5">
-            <p class="w-75">Não tem uma conta? <a asp-controller="Usuario" asp-action="Index">Cadastre-se</a> </p>
+        <div class="mb-3 w-100">
+            <label for="login" class="form-label">Login:</label>
+            <input type="email" class="form-control fs-5" asp-for="Login" required>
         </div>
-    </div>
+        <div class="mb-4 w-100">
+            <label for="senha" class="form-label">Senha:</label>
+            <input type="password" class="form-control fs-5" asp-for="Senha" required>
+        </div>
+
+        <div class="mb-3 w-100">
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAAAOsP8bzb0-pXTOi"></div>
+        </div>
+        <button type="submit" class="btn btn-primary mb-3 w-100 fs-5">Entrar</button>
+        <div class="w-100 fs-5">
+            <a asp-controller="Login" asp-action="EsqueciMinhaSenha" class="text-decoration-none text-light">Esqueci a Senha</a>
+            <span>|</span>
+            <a asp-controller="Usuario" asp-action="Index" class="text-decoration-none text-light">Primeiro acesso</a>
+        </div>
+    </form>
 </div>
+
 
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js"></script>

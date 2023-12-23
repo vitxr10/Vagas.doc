@@ -16,22 +16,18 @@ namespace VagasDoc.Controllers
             _usuarioRepository = usuarioRepository;
         }
 
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
         }
 
         [FiltroUsuarioLogado]
+        [HttpGet]
         public IActionResult Excluir(int id)
         {
             UsuarioModel usuario = _usuarioRepository.ListarPorId(id);
             return View(usuario);
-        }
-
-        [FiltroUsuarioLogado]
-        public IActionResult AlterarSenha()
-        {
-            return View();
         }
 
         [HttpPost]

@@ -24,16 +24,14 @@
     </div>
 }
 
-<div class="text-center">
-    <h1>Esqueci minha senha</h1>
-    <h3>Informe seu login para receber uma nova senha em seu email.</h3>
+<div class="container-fluid d-flex flex-column align-items-center fs-5 mt-4">
+    <form method="post" asp-controller="Login" asp-action="EsqueciMinhaSenha" class="px-5 pt-4">
+        <h1 class="mb-4">Esqueci minha senha</h1>
+        <div class="mb-3 w-100">
+            <label class="form-label fs-5">Informe seu login:</label>
+            <input type="text" class="form-control fs-5" asp-for="Login" required>
+        </div>
+        <button type="submit" class="btn btn-primary fs-5 w-100">Enviar</button>
+        <a class="fs-5 w-100 text-light" asp-area="" asp-controller="Login" asp-action="Index">Voltar</a>
+    </form>
 </div>
-
-<form method="post" asp-controller="Login" asp-action="EsqueciMinhaSenha">
-    <div class="mb-3">
-        <label class="form-label">Informe seu login:</label>
-        <input type="text" class="form-control w-25" asp-for="Login">
-    </div>
-    <button type="submit" class="btn btn-primary fs-5">Enviar</button>
-    <a class="btn btn-secondary fs-5" asp-area="" asp-controller="Login" asp-action="Index">Voltar</a>
-</form>
