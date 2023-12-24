@@ -4,6 +4,8 @@
 
 @if (Model != null && Model.Any())
 {
+    var contador = 1;
+
     <div class="text-center mb-4">
         <h1>Minhas vagas</h1>
     </div>
@@ -23,7 +25,7 @@
             @foreach (VagaModel vaga in Model)
             {
                 <tr>
-                    <th scope="row">@vaga.Id</th>
+                    <th scope="row">@contador</th>
                     <td>@vaga.Titulo</td>
                     <td>@vaga.Empresa</td>
 
@@ -62,6 +64,8 @@
                         <a class="btn btn-danger fs-5" asp-route-id="@vaga.Id" asp-controller="Vaga" asp-action="Excluir">Excluir</a>
                     </td>
                 </tr>
+
+                contador++;
             }
         </tbody>
     </table>

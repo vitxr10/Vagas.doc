@@ -1,9 +1,9 @@
 ﻿@model UsuarioModel
 
 <div class="dropdown">
-    <button class="btn text-light fs-5" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link text-decoration-none text-light fs-5" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         Perfil
-    </button>
+    </a>
     <ul class="dropdown-menu">
         <li><a class="dropdown-item" asp-route-id="@Model.Id" asp-controller="AlterarSenha" asp-action="AlterarSenha">Alterar senha</a></li>
         <li><a class="dropdown-item" asp-route-id="@Model.Id" asp-controller="Usuario" asp-action="Excluir">Excluir conta</a></li>
