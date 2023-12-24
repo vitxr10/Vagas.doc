@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\images\\jobsHome.png"
     },
     {
+      "Id": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\VagasDoc\\wwwroot\\images\\suitcase-solid.svg",
+      "PackagePath": "staticwebassets\\images\\suitcase-solid.svg"
+    },
+    {
       "Id": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\VagasDoc\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

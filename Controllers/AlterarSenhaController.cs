@@ -36,13 +36,13 @@ namespace VagasDoc.Controllers
             if (!(string.Equals(senhaAtual, usuario.Senha)))
             {
                 TempData["MensagemErro"] = "Senha atual incorreta.";
-                return RedirectToAction("AlterarSenha", "Usuario");
+                return RedirectToAction("AlterarSenha", "AlterarSenha");
             }
 
             if (!(string.Equals(alterarSenhaModel.NovaSenha, alterarSenhaModel.ConfirmacaoNovaSenha)))
             {
                 TempData["MensagemErro"] = "A senha nova não coincide com a confirmação.";
-                return RedirectToAction("AlterarSenha", "Usuario");
+                return RedirectToAction("AlterarSenha", "AlterarSenha");
             }
 
             var novaSenha = Cripto.Encrypt(alterarSenhaModel.NovaSenha);
@@ -51,6 +51,8 @@ namespace VagasDoc.Controllers
 
             _bancoContext.Usuarios.Update(usuario);
             _bancoContext.SaveChanges();
+
+            TempData["MensagemSucesso"] = "Senha alterada com sucesso.";
 
             return RedirectToAction("Index", "Home");
         }

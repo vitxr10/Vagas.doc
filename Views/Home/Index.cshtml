@@ -3,6 +3,16 @@
     ViewData["Title"] = "Vagas.doc";
 }
 
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alerta alerta-sucesso" role="alert">
+        <button class="close-alert">X</button>
+        <div>
+            @TempData["MensagemSucesso"]
+        </div>
+    </div>
+}
+
 <div class="text-center mb-5">
     <h1>Bem vindo, @Model.Nome!</h1>
     <h4>Tem vaguinha nova pra cadastrar hoje?</h4>

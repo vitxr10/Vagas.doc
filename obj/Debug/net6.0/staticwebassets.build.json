@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "alMBkrsIuE6Mmi16YAfEbJ+rAcJ4zTBLZZVpeYhNB5w=",
+  "Hash": "EYXiyO0ON6rYiLG6vXJ1hZ3Uds00U0v0JPDSYIvvcvc=",
   "Source": "VagasDoc",
   "BasePath": "_content/VagasDoc",
   "Mode": "Default",
@@ -117,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\jobsHome.png"
+    },
+    {
+      "Identity": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\VagasDoc\\wwwroot\\images\\suitcase-solid.svg",
+      "SourceId": "VagasDoc",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\VagasDoc\\wwwroot\\",
+      "BasePath": "_content/VagasDoc",
+      "RelativePath": "images/suitcase-solid.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\suitcase-solid.svg"
     },
     {
       "Identity": "C:\\Users\\vitor\\OneDrive\\Área de Trabalho\\VagasDoc\\wwwroot\\js\\site.js",

@@ -6,10 +6,20 @@
 
 @if (TempData["MensagemErro"] != null)
 {
-    <div class="alert alert-danger d-flex align-items-center" role="alert">
-        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill" /></svg>
+    <div class="alerta alerta-erro" role="alert">
+        <button class="close-alert">X</button>
         <div>
             @TempData["MensagemErro"]
+        </div>
+    </div>
+}
+
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alerta alerta-sucesso" role="alert">
+        <button class="close-alert">X</button>
+        <div>
+            @TempData["MensagemSucesso"]
         </div>
     </div>
 }
