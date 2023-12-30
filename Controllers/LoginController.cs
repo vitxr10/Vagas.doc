@@ -133,7 +133,7 @@ namespace VagasDoc.Controllers
             Random random = new Random();
             var novaSenha = random.Next();
 
-            string mensagem = $"Sua nova senha é {novaSenha}";
+            string mensagem = $"<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><title>Redefinição de Senha</title><style>body {{font-family: Arial, sans-serif;background-color: #f0f5f9;margin: 0;padding: 0;}}.container {{width: 100%;max-width: 600px;margin: 20px auto;padding: 20px;background-color: #fff;border-radius: 8px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);border: 4px solid #2a75b3;}}h1 {{color: #2a75b3;text-align: center;}}.message {{text-align: center;margin-top: 20px;color: #333;font-size: 18px;}}.message strong {{font-weight: bold;color: #2a75b3;}}</style></head><body><div class=\"container\"><h1>Redefinição de Senha</h1><div class=\"message\"><p>Sua nova senha é <strong>{novaSenha}</strong></p></div></div></body></html>";
             string assunto = "Redefinição de senha";
 
             if (_email.Enviar(usuario.Login, assunto, mensagem))
