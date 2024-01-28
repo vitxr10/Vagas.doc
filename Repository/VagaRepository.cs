@@ -14,8 +14,10 @@ namespace VagasDoc.Repository
         public VagaModel Criar(VagaModel vaga)
         {
             vaga.DataCadastro = DateTime.Now;
+
             _bancoContext.Vagas.Add(vaga);
             _bancoContext.SaveChanges();
+
             return vaga;
         }
 

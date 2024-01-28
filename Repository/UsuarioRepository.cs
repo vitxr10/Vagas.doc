@@ -21,8 +21,10 @@ namespace VagasDoc.Repository
         {
             usuario.DataCadastro = DateTime.Now;
             usuario.Senha = Cripto.Encrypt(usuario.Senha);
+
             _bancoContext.Usuarios.Add(usuario);
             _bancoContext.SaveChanges();
+
             return usuario;
         }
 
