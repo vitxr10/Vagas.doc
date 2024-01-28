@@ -29,6 +29,7 @@ namespace VagasDoc.Controllers
             UsuarioModel usuarioLogado = _sessao.BuscarSessaoUsuario();
 
             var listaVagas = _vagaRepository.Listar(usuarioLogado.Id);
+
             return View(listaVagas);
         }
 
@@ -36,6 +37,7 @@ namespace VagasDoc.Controllers
         public IActionResult Editar(int id)
         {
             VagaModel vaga = _vagaRepository.ListarPorId(id);
+
             return View(vaga);
         }
 
@@ -43,6 +45,7 @@ namespace VagasDoc.Controllers
         public IActionResult Excluir(int id)
         {
             VagaModel vaga = _vagaRepository.ListarPorId(id);
+
             return View(vaga);
         }
 
@@ -50,9 +53,10 @@ namespace VagasDoc.Controllers
         public IActionResult Criar(VagaModel vaga)
         {
             UsuarioModel usuarioLogado = _sessao.BuscarSessaoUsuario();
-            vaga.UsuarioId = usuarioLogado.Id;
 
+            vaga.UsuarioId = usuarioLogado.Id;
             _vagaRepository.Criar(vaga);
+
             return RedirectToAction("Listar");
         }
 
@@ -60,9 +64,10 @@ namespace VagasDoc.Controllers
         public IActionResult Editar(VagaModel vaga)
         {
             UsuarioModel usuarioLogado = _sessao.BuscarSessaoUsuario();
-            vaga.UsuarioId = usuarioLogado.Id;
 
+            vaga.UsuarioId = usuarioLogado.Id;
             _vagaRepository.Editar(vaga);
+
             return RedirectToAction("Listar");
         }
 
@@ -70,6 +75,7 @@ namespace VagasDoc.Controllers
         public IActionResult Excluir(VagaModel vaga)
         {
             _vagaRepository.Excluir(vaga);
+
             return RedirectToAction("Listar");
         }
 

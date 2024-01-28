@@ -27,6 +27,7 @@ namespace VagasDoc.Controllers
         public IActionResult Excluir(int id)
         {
             UsuarioModel usuario = _usuarioRepository.ListarPorId(id);
+
             return View(usuario);
         }
 
@@ -34,6 +35,7 @@ namespace VagasDoc.Controllers
         public IActionResult Criar(UsuarioModel usuario)
         {
             _usuarioRepository.Criar(usuario);
+
             return RedirectToAction("Index", "Login");
         }
 
@@ -42,9 +44,8 @@ namespace VagasDoc.Controllers
         public IActionResult Excluir(UsuarioModel usuario)
         {
             _usuarioRepository.Excluir(usuario);
+
             return RedirectToAction("Index", "Login");
         }
-
-        
     }
 }

@@ -10,6 +10,7 @@ namespace VagasDoc.Helper
         {
             _httpContext = httpContext;
         }
+
         public UsuarioModel BuscarSessaoUsuario()
         {
             string sessaoUsuario = _httpContext.HttpContext.Session.GetString("sessaoUsuarioLogado");
@@ -22,6 +23,7 @@ namespace VagasDoc.Helper
         public void CriarSessaoUsuario(UsuarioModel usuario)
         {
             string valor = JsonSerializer.Serialize(usuario);
+
             _httpContext.HttpContext.Session.SetString("sessaoUsuarioLogado", valor);
         }
 
